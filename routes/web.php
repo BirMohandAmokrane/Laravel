@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\OrderController;
@@ -30,17 +31,20 @@ use App\Http\Controllers\panierController;
 
 //declarer une route qui communique ave un controller TestController
 
-Route::get('/test',[TestController::class,'index'])->name("test");
-Route::get("/accueil/{x}/page/{y?}",[SiteController::class,'accueil'])->name("accueil");
-Route::get("/contact",[SiteController::class,'contact'])->name("contact");
+//Route::get('/test',[TestController::class,'index'])->name("test");
+//Route::get("/accueil/{x}/page/{y?}",[SiteController::class,'accueil'])->name("accueil");
+//Route::get("/contact",[SiteController::class,'contact'])->name("contact");
+//Route::get('/{date}/{num}', [OrderController::class, 'show'])
+//->name('order.show')
+//->where(["date"=>"[0-9]{2}-[0-9]{2}-[0-9]{4}","num"=>"[0-9]{1,4}"]);
 
-Route::get('/{date}/{num}', [OrderController::class, 'show'])
-->name('order.show')
-->where(["date"=>"[0-9]{2}-[0-9]{2}-[0-9]{4}","num"=>"[0-9]{1,4}"]);
+// WebSite routes : 
 
 Route::get("/",[WebsiteController::class,'accueil'])->name('website.accueil');
 Route::get("/presentation",[WebsiteController::class,'presentation'])->name('website.presentation');
 Route::get("/produits",[WebsiteController::class,'produits'])->name('website.produits');
+
+Route::get("/checkout",[WebsiteController::class,'checkout'])->name('website.checkout');
 
 Route::get("/contact",[WebsiteController::class,'contact'])->name('website.contact');
 Route::post("/contact/save",[WebsiteController::class,'save'])->name("website.save");
@@ -49,7 +53,7 @@ Route::post("/contact/save",[WebsiteController::class,'save'])->name("website.sa
 
 //le middleware auth autorise aux 2 routes(products et categories), que les users authentifiés  
 // methode1:  Route::middleware (['auth']) -> group (function () {});
-// methode1: Route::resource('c....::class)->middleware('auth');
+// methode2: Route::resource('c....::class)->middleware('auth');
 
 Route::resource('categories', CategoriesController::class);
 Route::resource( 'products', ProductsController::class);

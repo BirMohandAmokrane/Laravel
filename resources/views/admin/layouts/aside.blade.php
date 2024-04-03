@@ -38,29 +38,36 @@
                 @csrf
             </form>
           </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Categories
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('categories.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Liste des Categories</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('categories.create')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajouter Categorie</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+
+          <!--La table categories-->
+          @if(Auth::check() && Auth::user()->role === 'admin')
+
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Categories
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{route('categories.index')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Liste des Categories</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{route('categories.create')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Ajouter Categorie</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          
+          @endif
+
           <!--La table products-->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">

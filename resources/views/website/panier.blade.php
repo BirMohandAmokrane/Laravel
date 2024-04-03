@@ -146,7 +146,7 @@
                                 </ul>
                             </div>
                             <h4 class="grand-totall-title">Grand Total  <span>{{$total}} €</span></h4>
-                            <a href="#">Proceed to Checkout</a>
+                            <a href="{{route('website.checkout')}}">Proceed to Checkout</a>
                         </div>
                     </div>
                 </div>

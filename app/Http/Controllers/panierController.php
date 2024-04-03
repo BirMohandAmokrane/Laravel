@@ -9,7 +9,13 @@ class panierController extends Controller
 
     public function panier(){
 
-        $products = session()->get('panier');
+        $products = [];
+        if(session()->has('panier')){
+
+         $products = session()->get('panier');
+
+        }
+        
         return view('website.panier', compact('products'));
     }
 
@@ -44,6 +50,8 @@ class panierController extends Controller
         }
         
         return redirect()->back()->with('message', 'un nouveau produit est ajouté au panier avec succé ;)');
+        //session()->forget('panier');
         
     }
 }
+

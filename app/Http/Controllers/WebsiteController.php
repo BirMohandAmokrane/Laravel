@@ -16,6 +16,11 @@ class WebsiteController extends Controller
         return view("website.presentation");
     }
 
+    public function checkout(){
+        $products = session()->get('panier');
+        return view("website.checkout", compact('products'));
+    }
+
     public function produits(){
         
         $products = Product::all();
