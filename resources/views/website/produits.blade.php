@@ -6,7 +6,7 @@
     <div class="product-area pb-100">
 
         <div class="section-title-5 text-center">
-            <h2>Featured Product</h2>
+            <h2>Nos Produits</h2>
         </div>
 
         <div class="shop-area pt-95 pb-100">
@@ -84,7 +84,7 @@
 
 
                                 <div class="view-more text-center mt-20 toggle-btn3 col-12">
-                                    <a class="loadMore3" href="#">VIEW MORE PRODUCTS</a>
+                                    <a class="loadMore3" href="#">PLUS DE PRODUITS</a>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +105,9 @@
                                 </div>
                             </div>
                             <div class="sidebar-widget">
+                                
                                 <h4 class="pro-sidebar-title">Refine By </h4>
+
                                 <div class="sidebar-widget-list mt-30">
                                     <ul>
                                         <li>
@@ -138,7 +140,8 @@
                                     <div id="slider-range"></div>
                                 </div>
                             </div>
-                            <div class="sidebar-widget mt-50">
+
+                            {{--<div class="sidebar-widget mt-50">
                                 <h4 class="pro-sidebar-title">Colour </h4>
                                 <div class="sidebar-widget-list mt-20">
                                     <ul>
@@ -168,8 +171,9 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="sidebar-widget mt-40">
+                            </div>--}}
+
+                            {{--<div class="sidebar-widget mt-40">
                                 <h4 class="pro-sidebar-title">Size </h4>
                                 <div class="sidebar-widget-list mt-20">
                                     <ul>
@@ -199,8 +203,9 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="sidebar-widget mt-50">
+                            </div>--}}
+
+                            {{--<div class="sidebar-widget mt-50">
                                 <h4 class="pro-sidebar-title">Tag </h4>
                                 <div class="sidebar-widget-tag mt-25">
                                     <ul>
@@ -211,7 +216,7 @@
                                         <li><a href="#">Fashion</a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div>--}}
                         </div>
                     </div>
                 </div>

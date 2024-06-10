@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="billing-info-wrap">
-                    <h3>Billing Details</h3>
+                    <h3>Détails de facturation</h3>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="row">
@@ -23,7 +23,7 @@
                             <input placeholder="mot de passe" type="password" name="password" required>
                             <input placeholder="confirmation" id="password-confirm" type="password" class="form-control" name="password_confirmation" required >
 
-                            <button class="btn-hover checkout-btn" type="submit">register</button>
+                            <button class="btn-hover checkout-btn" type="submit">S'inscrire</button>
                         </div>
                     </form>
                     
@@ -31,12 +31,12 @@
             </div>
             <div class="col-lg-5">
                 <div class="your-order-area">
-                    <h3>Your order</h3>
-                    <div class="your-order-wrap gray-bg-4">
+                    <h3>Votre Commande</h3>
+                    <div class="your-orde/r-wrap gray-bg-4">
                         <div class="your-order-product-info">
                             <div class="your-order-top">
                                 <ul>
-                                    <li>Product</li>
+                                    <li>Produits</li>
                                     <li>Total</li>
                                 </ul>
                             </div>
@@ -50,7 +50,7 @@
                                             $total+= $product['price']*$product['qty'];
                                         @endphp
 
-                                       <li><span class="order-middle-left">{{$product['name']}} X {{$product['qty']}} </span> <span class="order-price">{{$product['price']}} € </span></li>
+                                       <li><span class="order-middle-left"><img height="20" width="20" src="{{ asset('images/products/'. $product['photo1'] ) }}" alt=""> {{$product['name']}} X {{$product['qty']}} </span> <span class="order-price">{{$product['price']}} € </span></li>
                                     @empty
                                     
                                         <li><span class="order-middle-left">votre panier est vide</span> <span class="order-price">0 € </span></li>
@@ -60,8 +60,8 @@
                             </div>
                             <div class="your-order-bottom">
                                 <ul>
-                                    <li class="your-order-shipping">Shipping</li>
-                                    <li>Free shipping</li>
+                                    <li class="your-order-shipping">Livraison</li>
+                                    <li>Gratuite</li>
                                 </ul>
                             </div>
                             <div class="your-order-total">
@@ -71,7 +71,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="payment-method">
+                       {{-- <div class="payment-method">
                             <div class="payment-accordion element-mrg">
                                 <div class="panel-group" id="accordion">
                                     <div class="panel payment-accordion">
@@ -119,9 +119,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>--}}
                     <div class="Place-order mt-25">
-                        <a class="btn-hover" href="#">Place Order</a>
+                        <a class="btn-hover" href="#">Passer sa commande</a>
                     </div>
                 </div>
             </div>

@@ -2210,6 +2210,14 @@ a.default-btn {
 .main-menu nav ul li ul.submenu li a:hover {
   color: #a749ff;
 }
+.main-menu nav ul li a.active {
+  color: #0000ff;
+  
+}
+.main-menu nav ul li a.visited {
+  color: #0000ff;
+  
+}
 .main-menu nav ul li ul.submenu li a::before {
   background: #a749ff none repeat scroll 0 0;
   border-radius: 50%;

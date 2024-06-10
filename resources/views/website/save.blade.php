@@ -12,3 +12,4 @@ votre email est : {{ $request->email }}
 votre message est :  {{ $request->message }}
 @show
 
+@endsection

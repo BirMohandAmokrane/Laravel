@@ -10,13 +10,24 @@ class panierController extends Controller
     public function panier(){
 
         $products = [];
-        if(session()->has('panier')){
 
-         $products = session()->get('panier');
+        $totalPrice = 0;
+        $productCount = 0;
 
+        if(!session()->has('panier')) {
+            session()->put('panier', []);
+            $totalPrice = 0;
+            $productCount = 0;
         }
+        else {
+         $products = session()->get('panier');
+         $productCount = count($products);
+         foreach ($products as $product){
+            $totalPrice += $product['price'] * $product['qty'];
+         }
+    }
         
-        return view('website.panier', compact('products'));
+        return view('website.panier', compact('products', 'totalPrice', 'productCount'));
     }
 
     public function delProdPanier($indice){

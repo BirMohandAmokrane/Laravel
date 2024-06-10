@@ -9,15 +9,15 @@ Page d'accueil
     <!--Début de slider-->
     <div class="slider-area ml-70 mr-70">
         <div class="slider-active owl-carousel nav-style-1 owl-dot-none">
-                <div class="single-slider-2 slider-height-1 slider-height-res15 d-flex align-items-center slider-height-res bg-img" style="background-image:url(assets/img/slider/slider-8-2.jpg);"> 
+                <div class="single-slider-2 slider-height-1 slider-height-res15 d-flex align-items-center slider-height-res bg-img" style="background-image:url(assets/img/slider/slider-8.jpg); height: 425px;"> 
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-7 ms-auto">
+                        <div class="col-xl-6 col-lg-6 col66-md-7 ms-auto">
                             <div class="slider-content-2 slider-content-fruits slider-animated-1">
-                                <h3 class="animated">Natural & Healthy</h3>
-                                <h1 class="animated">100% Organic <br>Fruits Collection</h1>
+                                <h3 class="animated">Naturel & Sain</h3>
+                                <h1 class="animated">100% Organique <br>Fruits et Légumes</h1>
                                 <div class="slider-btn btn-hover">
-                                    <a class="animated" href="{{route('website.produits')}}">SHOP NOW</a>
+                                    <a class="animated" href="{{route('website.produits')}}">Acheter Maintenant</a>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +107,7 @@ Page d'accueil
                             <span>-20% Off</span>
                             <h2>New Fruits</h2>
                             <h5>Best for your health</h5>
-                            <a href="{{route('website.produits')}}">SHOP NOW</a>
+                            <a href="{{route('website.produits')}}">Acheter Maintenant</a>
                         </div>
                     </div>
                 </div>
@@ -146,12 +146,12 @@ Page d'accueil
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6">
                     <div class="funfact-content funfact-res text-center">
-                        <h2>Deal of the day</h2>
+                        <h2>Promo de jour</h2>
                         <div class="timer">
                             <div data-countdown="2022/06/01"></div>
                         </div>
                         <div class="funfact-btn funfact-btn-green btn-hover">
-                            <a href="{{route('website.produits')}}">SHOP NOW</a>
+                            <a href="{{route('website.produits')}}">Acheter Maintenant</a>
                         </div>
                     </div>
                 </div>
@@ -173,8 +173,8 @@ Page d'accueil
                     <div class="testimonial-active owl-carousel nav-style-1 nav-testi-style owl-dot-none">
                         <div class="single-testimonial text-center">
                             <img src="{{ asset ('assets/img/testimonial/testi-1.png') }}" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            <div class="client-info">
+                            <p>La plateforme Shop permet de d'assurer une expérience conviviale aux utilisateurs, aux clients et aux administrateurs pendant leurs achats ou lors de la gestion de contenu de l'application  </p> 
+                           <div class="client-info">
                                 <i class="fa fa-map-signs"></i>
                                 <h5>Grace Alvarado</h5>
                                 <span>Customer</span>
@@ -188,7 +188,7 @@ Page d'accueil
     <!--début de testimonial-area -->
     
     <!--début de subscribe area -->
-    <div class="subscribe-area-3 pt-100 pb-100">
+    <!--<div class="subscribe-area-3 pt-100 pb-100">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-5 col-lg-7 col-md-10 ms-auto me-auto">
@@ -212,6 +212,6 @@ Page d'accueil
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--fin de funfact area -->
 @endsection

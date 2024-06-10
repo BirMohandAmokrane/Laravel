@@ -19,64 +19,47 @@
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/plugins.css')}}">
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-    
+    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}"> 
+   
 </head>
 <body>
     <header class="header-area clearfix">
 
-        @include("layouts.headerTop")
+        {{--@include("layouts.headerTop")--}}
 
             <div class="header-bottom sticky-bar header-res-padding header-padding-2">
                 <div class="container-fluid">
+                    
                     <div class="row">
-                        <div class="col-xl-2 col-lg-2 col-md-6 col-4">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-4">
                             @include("layouts.logo")
                         </div>
-                        <div class="col-xl-8 col-lg-8 d-none d-lg-block">
+                        <div class="col-xl-7 col-lg-7 d-none d-lg-block">
                             <div class="main-menu">
-                                
-
-                               @include('layouts.navbar')
-                                    
-                                
+                                @include('layouts.navbar')
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-6 col-8">
                             <div class="header-right-wrap">
-                                <div class="same-style header-search">
-                                    <a class="search-active" href="#"><i class="pe-7s-search"></i></a>
-                                    <div class="search-content">
-                                        <form action="#">
-                                            <input type="text" placeholder="Search" />
-                                            <button class="button-search"><i class="pe-7s-search"></i></button>
-                                        </form>
-                                    </div> 
-                                </div>
                                 <div class="same-style account-satting">
                                     <a class="account-satting-active" href="#"><i class="pe-7s-user-female"></i></a>
                                     <div class="account-dropdown">
                                         <ul>
                                             <li><a href="login-register.html">Login</a></li>
                                             <li><a href="login-register.html">Register</a></li>
-                                            <li><a href="wishlist.html">Wishlist  </a></li>
                                             <li><a href="my-account.html">my account</a></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="same-style header-wishlist">
-                                    <a href="wishlist.html"><i class="pe-7s-like"></i></a>
-                                </div>
                                 <div class="same-style cart-wrap">
                                     <button class="icon-cart">
                                         <i class="pe-7s-shopbag"></i>
-                                        <span class="count-style">02</span>
+                                        <span class="count-style">{{$productCount}}</span>
                                     </button>
                                     <div class="shopping-cart-content">
-                                       
                                         <div class="shopping-cart-total">
-                                            <h4>Shipping : <span>$20.00</span></h4>
-                                            <h4>Total : <span class="shop-total">$260.00</span></h4>
+                                            {{--<h4>Shipping : <span>15 €</span></h4>--}}
+                                            <h4>Total : <span class="shop-total">{{$totalPrice}} €</span></h4>
                                         </div>
                                         <div class="shopping-cart-btn btn-hover text-center">
                                             <a class="default-btn" href="{{route('panier.panier')}}">Panier</a>
@@ -87,6 +70,24 @@
                             </div>
                         </div>
                     </div>
+                    
+                    
+                    <div class="mobile-menu-area">
+                        <div class="mobile-menu">
+                            <nav id="mobile-menu-active">
+                                <ul class="menu-overflow">
+                                    <li><a href="{{route('website.accueil')}}">Accueil</a></li>
+                            
+                                    <li><a href="{{route('website.presentation')}}">Présentation</a></li>
+                                                                    
+                                    <li><a href="{{route('website.produits')}}">Produits</a></li>
+                                                                                                             
+                                    <li><a href="{{route('website.contact')}}">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
                 </div>
             </div>
     
@@ -102,11 +103,11 @@
         <div class="footer-top pt-80 pb-60 text-center bg-gray-2">
             <div class="container">
                 <div class="footer-logo">
-                    <a href="index.html">
-                        <img alt="" src="{{ asset('assets/img/logo/logo.png')}}">
+                    <a href="{{route('website.accueil')}}">
+                        <img alt="" src="{{ asset('assets/img/logo/logo1.jpg')}} "width="120px" height="26px">
                     </a>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                <p>Suivez-nous sur les réseaux et ne ratez pas l'accasion de savoir tous nos offres, Nos service et nos nouvautées </p>
                 <div class="footer-social">
                     <ul>
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -118,10 +119,11 @@
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom text-center">
             <div class="container">
                 <div class="copyright-2 copyright-gray">
-                    <p>© 2021 <a href="#">Flone</a>. All Rights Reserved.</p>
+                    <p>© 2023  Shop. Tous droits réservés.</p>
                 </div>
             </div>
         </div>
@@ -284,6 +286,8 @@
     <script src="{{ asset('assets/js/ajax-mail.js')}}"></script>
     <!-- Main JS -->
     <script src="{{ asset('assets/js/main.js')}}"></script>
+    <!-- Nav JS -->
+    <script src="{{ asset('assets/js/nav.js')}}"></script>
         
 </body>
         

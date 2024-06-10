@@ -36,11 +36,13 @@
             <td>{{$product->category->name}}</td>
             <td>                
                 <a href="{{route('products.edit', $product->id)}}"> <button type="button" class="btn btn-success mr-2">Modifier</button> </a>
+                {{--@if(Auth::check() && Auth::user()->role === 'admin')--}}
                 <form  class="d-inline"   action="{{ route('products.destroy',$product->id) }}" method="post">
                     @csrf
                     @method("DELETE")
                     <button type="submit" onclick=" return confirm('êtes-vous sûr de supprimer?')" class="btn btn-danger" >Supprimer</button>
-                </form>          
+                </form>
+                {{--@endif--}}        
             </td>
         </tr>
         @empty
@@ -52,12 +54,7 @@
       
     </tbody>
 
-    <tfoot>
-        <tr>
-            <th> Name</th>
-            <th>Action</th>
-        </tr>
-    </tfoot>
+    
   </table>
 
 @endsection
